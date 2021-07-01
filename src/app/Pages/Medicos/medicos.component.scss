@@ -1,0 +1,37 @@
+nav {
+  background-color: white;
+  box-shadow: 1px 0px 15px -3px #404040;
+}
+
+a {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #2F135F !important;
+}
+
+a:active {
+  color: #2F135F !important;
+}
+
+table{
+    width: 100%;
+}
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+tr.mat-row.cdk-row th{
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+}
+.mat-flat-button.mat-primary:hover{
+    background: #2F135F;
+}

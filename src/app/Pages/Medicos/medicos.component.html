@@ -1,0 +1,53 @@
+<body> 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light mb-4 px-2 py-2">
+        <div class="container-fluid text-center">
+          <a class="nav-link" (click)="goHome()" id="titulo">
+            Plataforma Medica
+          </a>
+        </div>
+    </nav>
+
+    <div class="mx-5">
+        <h1 class="my-5 text-center"><span style="font-weight: bold;">DOCTORES</span></h1>
+        <div class="text-right">
+            <button mat-raised-button color="primary" class="mx-3 my-3" (click)="goCrearDoctor()"> Crear Doctor </button>
+        </div>
+        
+        <table mat-table [dataSource]="lst" class="mat-elevation-z4">
+            <ng-container matColumnDef="tipo">
+                <th mat-header-cell *matHeaderCellDef class="text-center">Tipo Documento</th>
+                <th mat-cell *matCellDef="let element" class="text-center">{{element.tipoDocumento}}</th>
+            </ng-container>
+
+            <ng-container matColumnDef="documento">
+                <th mat-header-cell *matHeaderCellDef class="text-center">Documento</th>
+                <th mat-cell *matCellDef="let element" class="text-center">{{element.numeroDocumento}}</th>
+            </ng-container>
+            
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef class="text-center">Nombre</th>
+                <th mat-cell *matCellDef="let element" class="text-center">{{element.primerNombre}}</th>
+            </ng-container>
+
+            <ng-container matColumnDef="apellido">
+                <th mat-header-cell *matHeaderCellDef class="text-center">Apellido</th>
+                <th mat-cell *matCellDef="let element" class="text-center">{{element.primerApellido}}</th>
+            </ng-container>
+
+            <ng-container matColumnDef="acciones">
+                <th mat-header-cell *matHeaderCellDef class="text-center" >Acciones</th>
+                <th mat-cell *matCellDef="let element" class="text-center">
+                    <button  mat-flat-button color="primary" [routerLink]="['./editarDoctor', element.numeroDocumento]">Editar</button>
+                </th>
+                <th mat-cell *matCellDef="let element" class="text-center">
+                    <button type=button class="btn btn-primary" (click)="DeleteMethod(element.numeroDocumento)">Eliminar</button>
+                </th>
+            </ng-container>
+            
+            
+            <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnas"></tr>
+        </table>
+    </div>
+    
+</body>

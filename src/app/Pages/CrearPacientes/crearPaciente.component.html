@@ -1,0 +1,66 @@
+<body> 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light mb-4 px-2 py-2">
+        <div class="container-fluid text-center">
+          <a class="nav-link" routerLink="/" id="titulo">
+            Plataforma Medica
+          </a>
+        </div>
+    </nav>
+
+    <div class="mx-5">
+        <h1 class="my-5 text-center"><span style="font-weight: bold;">Crear Pacientes</span></h1>
+        
+        <form class="form my-5 text-center">
+
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" id="tipo" aria-describedby="emailHelp" placeholder="Tipo de documento" />
+                </span>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                    <input type="number" class="form-control" id="numero" aria-describedby="emailHelp" placeholder="Ingresa tu número de documento" />
+                </span>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" id="primerNombre" aria-describedby="emailHelp" placeholder="Ingrese tu Primer Nombre" />
+                </span>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" id="segundoNombre" aria-describedby="emailHelp" placeholder="Ingrese tu Segundo Nombre" />
+                </span>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" id="primerApellido" aria-describedby="emailHelp" placeholder="Ingrese tu Primer Apellido" />
+                </span>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" id="segundoApellido" aria-describedby="emailHelp" placeholder="Ingrese tu Segundo Apellido" />
+                </span>
+            </div>
+
+            <div class="row justify-content-center my-3">
+                <button mat-flat-button color="primary" type="submit" id="btnCreate" (click)="createPaciente()">Crear Paciente</button>
+            </div>
+            <div class="row justify-content-center">
+                <a (click)="goPacientes()" id="linkvolver"> Volver a Listado de Pacientes </a>
+            </div>
+        </form>
+
+    </div>
+</body>

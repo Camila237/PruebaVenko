@@ -1,0 +1,39 @@
+<body> 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light mb-4 px-2 py-2">
+        <div class="container-fluid text-center">
+          <a class="nav-link" (click)="goHome()" id="titulo">
+            Plataforma Medica
+          </a>
+        </div>
+    </nav>
+
+    
+    <div class="mx-5">
+        <h1 class="my-5 text-center"><span style="font-weight: bold;">Pacientes</span></h1>
+        <div class="text-right">
+            <button mat-raised-button color="primary" class="mx-3 my-3" (click)="goCrearPaciente()" id="btncrear"> Crear Paciente </button>
+        </div>
+        
+        <table>
+            <tr>
+                <th>Tipo Documento</th>
+                <th>Documento</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Acciones</th>
+            </tr>
+            <tr *ngFor="let item of lst">
+                <td>{{item.tipoDocumento}}</td>
+                <td>{{item.numeroDocumento}}</td>
+                <td>{{item.primerNombre}}</td>
+                <td>{{item.primerApellido}}</td>
+                <td>  
+                    <!-- [routerLink]="['./editarPaciente', item.numeroDocumento]"  -->
+                    <button mat-flat-button color="primary">Editar</button>
+                    <button mat-flat-button color="primary" (click)="DeleteMethod(item.numeroDocumento)">Eliminar</button>
+                </td>
+            </tr>
+        </table>
+        
+    </div>    
+</body>

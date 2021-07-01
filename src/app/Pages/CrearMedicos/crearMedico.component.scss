@@ -1,0 +1,70 @@
+nav {
+  background-color: white;
+  box-shadow: 1px 0px 15px -3px #404040;
+}
+
+a {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+a:hover {
+  color: #2F135F !important;
+}
+
+a:active {
+  color: #2F135F !important;
+}
+
+.fa:before {
+    position: absolute;
+    margin: 10px;
+    margin-top: -6px;
+}
+
+i {
+    color: #2F135F;
+}
+
+.line {
+    margin-top: -0.7rem;
+    color: #2F135F;
+    cursor: pointer;
+     :hover {
+        color: #2F135F;
+    }
+}
+
+.input-group {
+    display: block;
+    color: black;
+    .form-control {
+        color: black;
+        height: 44px;
+        font-family: Tahoma;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 17px;
+        padding-right: 5px;
+        padding-left: 35px;
+    }
+    .input-group-text {
+        color: black;
+        display: inline-flex;
+        width: 50%;
+        background-color: transparent;
+        border: transparent;
+    }
+}
+
+#btnCreate{
+    width: 200px;
+    border-radius: 10px;
+}
+
+#linkvolver{
+    font-size: 15px !important;
+    cursor: pointer;
+}

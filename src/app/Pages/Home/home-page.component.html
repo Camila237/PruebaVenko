@@ -1,0 +1,19 @@
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light mb-4 px-2 py-2">
+    <div class="container-fluid text-center">
+      <a class="nav-link" (click)="goHome()" id="titulo">
+        Plataforma Medica
+      </a>
+    </div>
+  </nav>
+
+  <div class="mx-5">
+    <h1 class="my-5"> Bienvenido! </h1>
+    <h2> ¿Qué quieres ver hoy?</h2>
+    <div class="text-center my-5">
+      <button mat-stroked-button color="primary" class="mx-3 p-2" (click)="goMedicos()"> Doctores </button>
+      <button mat-stroked-button color="primary" class="mx-3 p-2" (click)="goPacientes()"> Pacientes </button>
+    </div>
+  </div>
+  
+</body>
